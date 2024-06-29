@@ -59,9 +59,11 @@ export FZF_DEFAULT_OPTS=" \
 
 # Aliases
 alias ls='exa --long --icons --group-directories-first'
-alias lsa='exa --all --long --icons --group-directories-first'
 alias l='exa --long --icons --tree --level=2 --group-directories-first'
 alias ll='exa --long --icons --tree --level=3 --group-directories-first'
+alias lsa='exa --all --long --icons --group-directories-first'
+alias la='exa --all --long --icons --tree --level=2 --group-directories-first'
+alias lla='exa --all --long --icons --tree --level=3 --group-directories-first'
 alias vim='nvim'
 alias c='clear'
 

@@ -11,9 +11,9 @@ return {
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
 
-      -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
+      -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
-      { 'folke/neodev.nvim', opts = {} },
+      { 'folke/lazydev.nvim', ft = 'lua', opts = {} },
     },
     config = function()
       --  This function gets run when an LSP attaches to a particular buffer.
@@ -158,6 +158,7 @@ return {
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
                 typeCheckingMode = 'off',
+                reportUnreachable = false,
               },
             },
           },
@@ -222,7 +223,7 @@ return {
         'stylua',
         'black',
         'ruff',
-        -- 'pylsp',
+        'pylsp',
         'basedpyright',
         'debugpy',
       })
@@ -287,6 +288,23 @@ return {
         '<cmd>Trouble qflist toggle<cr>',
         desc = 'Quickfix List (Trouble)',
       },
+    },
+  },
+  {
+    'linux-cultist/venv-selector.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+      'mfussenegger/nvim-dap-python', --optional
+      { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    },
+    lazy = false,
+    branch = 'regexp', -- This is the regexp branch, use this for the new version
+    config = function()
+      require('venv-selector').setup()
+    end,
+    keys = {
+      { ',v', '<cmd>VenvSelect<cr>' },
     },
   },
 }

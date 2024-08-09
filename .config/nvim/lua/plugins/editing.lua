@@ -29,14 +29,6 @@ return {
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-  {
-    'altermo/ultimate-autopair.nvim',
-    event = { 'InsertEnter', 'CmdlineEnter' },
-    branch = 'v0.6', --recommended as each new version will have breaking changes
-    opts = {
-      --Config goes here
-    },
-  },
   { -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,

@@ -1,0 +1,94 @@
+{
+	"layer": "top",
+	"output": "DP-3",
+	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["mpris","wireplumber","clock","custom/weather","custom/power"],
+	
+	"wireplumber": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"hyprland/workspaces": {
+		"all-outputs": true,
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#cdd6f4'><b>{}</b></span>",
+                              "days":       "<span color='#b4befe'><b>{}</b></span>",
+                              "weeks":      "<span color='#94e2d5'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#f9e2af'><b>{}</b></span>",
+                              "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+	"mpris": {
+		"format": "{player_icon} {dynamic}",
+		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		},
+		"interval": 1,
+		// "ignored-players": ["firefox"]
+	},
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    },
+	"custom/weather": {
+	    "format": "{}°",
+	    "tooltip": true,
+	    "interval": 3600,
+	    "exec": "wttrbar",
+	    "return-type": "json"
+	},
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "tofi-drun",
+        "on-click-right": "killall tofi"
+    },
+    "custom/power":{
+        "format": " ",
+        "on-click": "wlogout",
+    },
+}

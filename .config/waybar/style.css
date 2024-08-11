@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "JetbrainsMono Nerd Font";
+	font-family: "JetbrainsMonoNL NF SemiBold";
 	font-size: 16px;
 	min-height: 0;
 	padding: 0;
@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-	background: rgba(30, 30, 46, 0.5);
+	background: rgba(30, 30, 46, 0.0);
 }
 
 window#waybar.hidden {
@@ -21,6 +21,7 @@ box.module {
 	border-radius: 7px;
 	padding: 1px 6px;
 	margin: 6px;
+	margin-bottom: 0px;
 	background: #313244;
 }
 
@@ -38,7 +39,7 @@ tooltip label {
 }
 
 #workspaces button {
-	color: #cdd6f4;
+	color: #7f849c;
 	padding: 0 6px;
 }
 
@@ -59,16 +60,8 @@ tooltip label {
 }
 
 #wireplumber {
-	color: #f5e0dc;
+	color: #89b4fa;
 }
-
-
-/* @keyframes blink { */
-/* 	to { */
-/* 		background-color: #BF616A; */
-/* 		color: #B5E8E0; */
-/* 	} */
-/* } */
 
 #clock {
 	color: #cdd6f4;
@@ -106,11 +99,21 @@ tooltip label {
 	color: #f38ba8;
 }
 
-#custom-updates {
-	color: #161320;
-	background: #E8A2AF;
+@keyframes blink-update {
+	to {
+		background-color: dodgerblue;
+	}
 }
 
-#custom-media {
+#custom-pacman {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 	color: #f5c2e7;
+	padding-right: 2px;
+}
+
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
 }

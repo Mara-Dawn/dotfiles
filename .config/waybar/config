@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"output": "DP-3",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-left": ["custom/launcher","cpu","memory","custom/media","custom/pacman","tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["mpris","wireplumber","clock","custom/weather","custom/power"],
 	
@@ -52,6 +52,16 @@
                     "on-scroll-down": "shift_down"
                     }
     },
+"custom/pacman": {
+  "format": "{icon}{}",
+  "return-type": "json",
+  "format-icons": {
+    "pending-updates": " ",
+    "updated": " "
+  },
+  "exec-if": "which waybar-updates",
+  "exec": "waybar-updates"
+},
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
 		"format-paused": "{status_icon} <i>{dynamic}</i>",

@@ -96,6 +96,13 @@ tooltip label {
 	color: #f38ba8;
 }
 
+#custom-notification {
+	font-size: 18px;
+	padding-right: 0px;
+	padding-left: 6px;
+	color: #cba6f7;
+}
+
 @keyframes blink-update {
 	to {
 		background-color: dodgerblue;

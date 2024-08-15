@@ -86,15 +86,11 @@
         "actions": [
           {
             "label": "Whole screen",
-            "command": "hyprshot -m output --clipboard-only"
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave output"
           },
           {
-            "label": "Whole window",
-            "command": "hyprshot -m window --clipboard-only"
-          },
-          {
-            "label": "Select region",
-            "command": "hyprshot -m region --clipboard-only"
+            "label": "Whole window / Select region",
+            "command": "grimblast --notify --cursor --freeze copysave area"
           }
         ]
       }

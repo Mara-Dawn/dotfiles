@@ -21,9 +21,9 @@
 		"format": "{icon} ",
 		"all-outputs": true,
 		"format-icons": {
-			"1": "<span font='16px'></span>",
-			"2": "<span font='15px'></span>",
-			"3": "<span font='16px'></span>",
+			"1": "<span font='15px'></span>",
+			"2": "<span font='16px'></span>",
+			"3": "<span font='16px'></span>",
 			"4": "<span font='20px'>󰊴</span>",
 			"5": "<span font='15px'></span>",
 			"6": "6",

@@ -76,7 +76,7 @@
             "enabled": false
         },
         "WebRichPresence (arRPC)": {
-            "enabled": false
+            "enabled": true
         },
         "AutomodContext": {
             "enabled": false
@@ -153,7 +153,9 @@
             "enabled": false
         },
         "CustomRPC": {
-            "enabled": false
+            "enabled": false,
+            "type": 0,
+            "timestampMode": 0
         },
         "CustomIdle": {
             "enabled": false
@@ -279,7 +281,8 @@
             "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
-            "ignoreGuilds": ""
+            "ignoreGuilds": "",
+            "collapseDeleted": false
         },
         "MessageTags": {
             "enabled": false
@@ -569,9 +572,6 @@
         "VoiceMessages": {
             "enabled": false
         },
-        "WatchTogetherAdblock": {
-            "enabled": false
-        },
         "WebKeybinds": {
             "enabled": true
         },
@@ -590,6 +590,15 @@
         "WebContextMenus": {
             "enabled": true,
             "addBack": true
+        },
+        "YoutubeAdblock": {
+            "enabled": false
+        },
+        "ConsoleJanitor": {
+            "enabled": false
+        },
+        "MentionAvatars": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -602,6 +611,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1720196168554
+        "settingsSyncVersion": 1724002868387
     }
 }

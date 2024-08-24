@@ -3,7 +3,7 @@
     "discordBranch": "stable",
     "splashColor": "rgb(205, 214, 244)",
     "splashBackground": "rgb(30, 30, 46)",
-    "hardwareAcceleration": true,
+    "hardwareAcceleration": false,
     "spellCheckLanguages": [
         "en-US",
         "en"

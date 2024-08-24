@@ -149,7 +149,6 @@ return {
         },
         basedpyright = {
           settings = {
-            -- disableOrganizeImports = true,
 
             basedpyright = {
               analysis = {
@@ -158,42 +157,10 @@ return {
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
                 typeCheckingMode = 'off',
-                reportUnreachable = false,
-                venvPath = '~/.pyenv/versions/3.12.4/envs/',
-                venv = 'bot-env',
               },
             },
           },
         },
-        pylsp = { enabled = false },
-        -- pylsp = {
-        --   settings = {
-        --     pylsp = {
-        --       plugins = {
-        --         autopep8 = { enabled = false },
-        --         jedi_completion = { fuzzy = true },
-        --         pycodestyle = {
-        --           ignore = {},
-        --           maxLineLength = 100,
-        --         },
-        --         -- rope_autoimport = { enabled = true },
-        --         -- rope_completion = { enabled = true },
-        --         pyflakes = { enabled = false },
-        --       },
-        --     },
-        --   },
-        -- },
-        -- jedi_language_server = {},
-        -- rust_analyzer = {},
-        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -225,7 +192,6 @@ return {
         'stylua',
         'black',
         'ruff',
-        'pylsp',
         'basedpyright',
         'debugpy',
         'hyprls',
@@ -295,21 +261,29 @@ return {
       },
     },
   },
-  -- {
-  --   'linux-cultist/venv-selector.nvim',
-  --   dependencies = {
-  --     'neovim/nvim-lspconfig',
-  --     'mfussenegger/nvim-dap',
-  --     'mfussenegger/nvim-dap-python', --optional
-  --     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
-  --   },
-  --   lazy = false,
-  --   branch = 'regexp', -- This is the regexp branch, use this for the new version
-  --   config = function()
-  --     require('venv-selector').setup()
-  --   end,
-  --   keys = {
-  --     { ',v', '<cmd>VenvSelect<cr>' },
-  --   },
-  -- },
+  {
+    'linux-cultist/venv-selector.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+      'mfussenegger/nvim-dap-python', --optional
+      { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    },
+    lazy = false,
+    branch = 'regexp', -- This is the regexp branch, use this for the new version
+    config = function()
+      require('venv-selector').setup {
+        settings = {
+          options = {
+            enable_cached_venvs = true,
+            cached_venv_automatic_activation = true,
+            notify_user_on_venv_activation = true,
+          },
+        },
+      }
+    end,
+    keys = {
+      { ',v', '<cmd>VenvSelect<cr>' },
+    },
+  },
 }

@@ -1,5 +1,5 @@
 {
-    "autoUpdate": false,
+    "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [
@@ -8,7 +8,7 @@
     "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": false,
-    "transparent": false,
+    "transparent": true,
     "winCtrlQ": false,
     "disableMinSize": false,
     "winNativeTitleBar": false,
@@ -599,6 +599,9 @@
         },
         "MentionAvatars": {
             "enabled": false
+        },
+        "NoMaskedUrlPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -611,6 +614,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1724002868387
+        "settingsSyncVersion": 1724669927480
     }
 }

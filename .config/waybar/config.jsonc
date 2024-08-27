@@ -2,7 +2,7 @@
 	"layer": "top",
 	"output": "DP-3",
 	"modules-left": ["custom/launcher","cpu","memory","custom/media","custom/pacman","tray","hyprland/window"],
-	"modules-center": ["hyprland/workspaces"],
+	"modules-center": ["hyprland/workspaces#1", "hyprland/workspaces#2", "hyprland/workspaces#3"],
 	"modules-right": ["mpris","wireplumber","clock","custom/weather","custom/notification","custom/power"],
 
 	"wireplumber": {
@@ -17,20 +17,35 @@
 			"default": ["", "", ""]
 		}
 	},
-	"hyprland/workspaces": {
+	"hyprland/workspaces#1": {
 		"format": "{icon} ",
 		"all-outputs": true,
 		"format-icons": {
-			"1": "<span font='15px'></span>",
-			"2": "<span font='16px'></span>",
-			"3": "<span font='16px'></span>",
-			"4": "<span font='20px'>󰊴</span>",
-			"5": "<span font='15px'></span>",
-			"6": "6",
-			"7": "7",
-			"8": "8",
-			"9": "9"
-		}
+			"11": "<span font='15px'></span>",
+			"12": "<span font='15px'></span>",
+			"default": "<span font='18px'></span>"
+		},
+		"ignore-workspaces": ["^[1-9]$|^[1][0]$|^[2][1-9]$"]
+	},
+	"hyprland/workspaces#2": {
+		"format": "{icon} ",
+		"all-outputs": true,
+		"format-icons": {
+			"21": "<span font='16px'></span>",
+			"22": "<span font='18px'>󰊴</span>",
+			"default": "<span font='18px'></span>"
+		},
+		"ignore-workspaces": ["^[1-9]$|^[1][0-9]$|^[2][0]$"]
+	},
+	"hyprland/workspaces#3": {
+		"format": "{icon} ",
+		"all-outputs": true,
+		"format-icons": {
+			"1": "<span font='16px'></span>",
+			"2": "<span font='16px'></span>",
+			"default": "<span font='18px'></span>"
+		},
+		"ignore-workspaces": ["^[1][0-9]$|^[2][0-9]$"]
 	},
 	"hyprland/window": {
 		"format": "> {initialTitle}",

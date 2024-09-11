@@ -3,10 +3,10 @@
     "discordBranch": "stable",
     "splashColor": "rgb(205, 214, 244)",
     "splashBackground": "rgb(30, 30, 46)",
-    "hardwareAcceleration": false,
+    "hardwareAcceleration": true,
     "spellCheckLanguages": [
         "en-US",
         "en"
     ],
-    "arRPC": true
+    "arRPC": false
 }

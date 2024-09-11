@@ -36,6 +36,9 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
+vim.keymap.set('n', '<leader>o', 'o<C-c>')
+vim.keymap.set('n', '<leader>O', 'O<C-c>')
+
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
 vim.keymap.set('n', '<cmd>w<CR>', '<cmd>w<CR>')
 

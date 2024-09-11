@@ -76,7 +76,7 @@
             "enabled": false
         },
         "WebRichPresence (arRPC)": {
-            "enabled": true
+            "enabled": false
         },
         "AutomodContext": {
             "enabled": false
@@ -85,7 +85,7 @@
             "enabled": false
         },
         "BetterFolders": {
-            "enabled": true,
+            "enabled": false,
             "sidebar": true,
             "sidebarAnim": true,
             "closeAllFolders": false,
@@ -461,9 +461,6 @@
         "ShowAllMessageButtons": {
             "enabled": false
         },
-        "ShowAllRoles": {
-            "enabled": true
-        },
         "ShowConnections": {
             "enabled": true
         },
@@ -602,6 +599,18 @@
         },
         "NoMaskedUrlPaste": {
             "enabled": false
+        },
+        "AlwaysExpandRoles": {
+            "enabled": true
+        },
+        "CopyFileContents": {
+            "enabled": false
+        },
+        "StickerPaste": {
+            "enabled": false
+        },
+        "VolumeBooster": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -614,6 +623,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1724669927480
+        "settingsSyncVersion": 1725437634933
     }
 }

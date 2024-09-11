@@ -69,13 +69,10 @@ alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-
 eval "$(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)"
-
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
 eval "$(zoxide init zsh --cmd cd)"
-
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+eval "$(starship init zsh)"

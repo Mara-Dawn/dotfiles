@@ -77,57 +77,18 @@ eval "$(zoxide init zsh --cmd cd)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 eval "$(starship init zsh)"
 
-# rest of zsh config above...
+# this enables transient prompt
+set-long-prompt() { PROMPT=$(starship prompt) }
+precmd_functions=(set-long-prompt)
 
-eval "$(starship init zsh)"
-
-precmd_functions=(zvm_init "${(@)precmd_functions:#zvm_init}")
-precmd_functions+=(set-long-prompt)
-zvm_after_init_commands+=("zle -N zle-line-finish; zle-line-finish() { set-short-prompt }")
-
-set-long-prompt() {
-    PROMPT=$(starship prompt)
-    RPROMPT=""
-}
-export COLUMNS=$(($COLUMNS + ($COLUMNS*0.1)))
 set-short-prompt() {
-    PROMPT="$(starship prompt --profile transient)"
-    zle .reset-prompt 2>/dev/null # hide the errors on ctrl+c
+  if [[ $PROMPT != '%# ' ]]; then
+      PROMPT=$(starship module character)
+    zle .reset-prompt
+  fi
 }
-
-zle-keymap-select() {
-    set-short-prompt
-}
-zle -N zle-keymap-select
 
 zle-line-finish() { set-short-prompt }
 zle -N zle-line-finish
 
 trap 'set-short-prompt; return 130' INT
-
-# try to fix vi mode indication (not working 100%)
-zvm_after_init_commands+=('
-  function zle-keymap-select() {
-    if [[ ${KEYMAP} == vicmd ]] ||
-       [[ $1 = "block" ]]; then
-      echo -ne "\e[1 q"
-      STARSHIP_KEYMAP=vicmd
-    elif [[ ${KEYMAP} == main ]] ||
-         [[ ${KEYMAP} == viins ]] ||
-         [[ ${KEYMAP} = "" ]] ||
-         [[ $1 = "beam" ]]; then
-      echo -ne "\e[5 q"
-      STARSHIP_KEYMAP=viins
-    fi
-    zle reset-prompt
-  }
-  zle -N zle-keymap-select
-
-  # Ensure vi mode is set
-  zle-line-init() {
-    zle -K viins
-    echo -ne "\e[5 q"
-  }
-  zle -N zle-line-init
-')
-

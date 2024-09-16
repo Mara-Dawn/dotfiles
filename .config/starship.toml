@@ -2,8 +2,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = false
-format = "\n$all"
+add_newline = true
+format = "$all"
 
 [profiles]
 transient = '$character'

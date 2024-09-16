@@ -70,7 +70,7 @@
 		}
 	},
 	"custom/pacman": {
-		"format": "{icon}{}",
+		"format": "{}{icon}",
 		"return-type": "json",
 		"format-icons": {
 			"pending-updates": " ",

@@ -8,8 +8,20 @@ local lspkind_comparator = function(conf)
         return nil
       end
     end
+
     local kind1 = lsp_types.CompletionItemKind[entry1:get_kind()]
     local kind2 = lsp_types.CompletionItemKind[entry2:get_kind()]
+
+    -- local _, entry1_under = entry1.completion_item.label:find '^_+'
+    -- local _, entry2_under = entry2.completion_item.label:find '^_+'
+    --
+    -- entry1_under = entry1_under or 0
+    -- entry2_under = entry2_under or 0
+    -- if entry1_under > entry2_under then
+    --   return false
+    -- elseif entry1_under < entry2_under then
+    --   return true
+    -- end
 
     local priority1 = conf.kind_priority[kind1] or 0
     local priority2 = conf.kind_priority[kind2] or 0
@@ -122,25 +134,25 @@ return {
             -- cmp.config.compare.exact,
             -- cmp.config.compare.score,
             -- require('cmp-under-comparator').under,
+            require('cmp-under-comparator').under,
             -- cmp.config.compare.kind,
             -- cmp.config.compare.sort_text,
             -- cmp.config.compare.length,
             -- cmp.config.compare.order,
             lspkind_comparator {
-              require('cmp-under-comparator').under,
               kind_priority = {
+                Enum = 15,
+                EnumMember = 15,
+                Variable = 14,
+                Property = 14,
+                Function = 13,
+                Method = 13,
+                Constant = 12,
                 Field = 11,
-                Property = 11,
-                Constant = 10,
-                Enum = 10,
-                EnumMember = 10,
                 Event = 10,
-                Function = 10,
-                Method = 10,
                 Operator = 10,
                 Reference = 10,
                 Struct = 10,
-                Variable = 10,
                 File = 8,
                 Folder = 8,
                 Class = 5,

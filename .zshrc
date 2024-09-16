@@ -78,17 +78,18 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(starship init zsh)"
 
 # this enables transient prompt
-set-long-prompt() { PROMPT=$(starship prompt) }
-precmd_functions=(set-long-prompt)
-
-set-short-prompt() {
-  if [[ $PROMPT != '%# ' ]]; then
-      PROMPT=$(starship module character)
-    zle .reset-prompt
-  fi
-}
-
-zle-line-finish() { set-short-prompt }
-zle -N zle-line-finish
-
-trap 'set-short-prompt; return 130' INT
+# set-long-prompt() { PROMPT=$(starship prompt) }
+# precmd_functions=(zvm_init "${(@)precmd_functions:#zvm_init}")
+# precmd_functions=(set-long-prompt)
+#
+# set-short-prompt() {
+#   if [[ $PROMPT != '%# ' ]]; then
+#       PROMPT=$(starship module character)
+#     zle .reset-prompt
+#   fi
+# }
+#
+# zle-line-finish() { set-short-prompt }
+# zle -N zle-line-finish
+#
+# trap 'set-short-prompt; return 130' INT

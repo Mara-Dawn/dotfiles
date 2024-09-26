@@ -21,6 +21,7 @@ return {
     'williamboman/mason.nvim',
     'jay-babu/mason-nvim-dap.nvim',
     'mfussenegger/nvim-dap-python',
+    'leoluz/nvim-dap-go',
   },
   config = function()
     local dap = require 'dap'
@@ -40,6 +41,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'debugpy',
+        'delve',
       },
     }
 

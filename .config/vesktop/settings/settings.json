@@ -437,9 +437,6 @@
         "RoleColorEverywhere": {
             "enabled": false
         },
-        "SearchReply": {
-            "enabled": false
-        },
         "SecretRingToneEnabler": {
             "enabled": false
         },
@@ -611,6 +608,12 @@
         },
         "VolumeBooster": {
             "enabled": false
+        },
+        "FullSearchContext": {
+            "enabled": false
+        },
+        "AccountPanelServerProfile": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -623,6 +626,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1725437634933
+        "settingsSyncVersion": 1726842113097
     }
 }

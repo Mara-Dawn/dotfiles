@@ -1,18 +1,27 @@
 #!/bin/bash
 
-function firefox_tiled() {
+args=$@
+
+function tile_check() {
   IFS=',' read -ra PARAMS <<< $1
-  if (( ${PARAMS[2]} == "firefox" )); then
-    if (( $(hyprctl clients | rg "class: firefox" | wc -l) <= 1 ));
+  if [[ "${PARAMS[2]}" == "$2" ]]; then
+    if (( $(hyprctl clients | rg "class: $2" | wc -l) <= 1 ));
     then
-      hyprctl dispatch settiled class:"^(firefox)$"
+      hyprctl dispatch settiled class:"^($2)$"
+      IFS=' ' read -ra TARGET <<< ${PARAMS[1]}
+      hyprctl dispatch movetoworkspacesilent ${TARGET[0]},class:"^($2)$"
     fi
   fi
 }
 
 function handle() {
   case $1 in
-    openwindow*) firefox_tiled $1;;
+    openwindow*) 
+      for class in $args
+      do
+        tile_check "$1" "$class"
+      done
+      ;;
   esac
 }
 

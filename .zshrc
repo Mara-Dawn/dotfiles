@@ -69,6 +69,7 @@ alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(direnv hook zsh)"
 eval "$(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"

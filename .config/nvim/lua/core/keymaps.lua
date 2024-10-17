@@ -41,10 +41,7 @@ vim.keymap.set('n', '<leader>O', 'O<C-c>')
 vim.keymap.set('i', '<C-p>', '<C-r>+<C-c>')
 
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
-vim.keymap.set('n', '<cmd>w<CR>', '<cmd>w<CR>')
-
-vim.keymap.set('i', 'jj', '<C-c>')
-
+--
 -- DB
 vim.keymap.set('n', '|', '<cmd>DBUIToggle<CR>')
 

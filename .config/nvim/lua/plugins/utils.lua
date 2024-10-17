@@ -109,7 +109,7 @@ return {
       max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
       min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
       line_numbers = true,
-      multiline_threshold = 20, -- Maximum number of lines to show for a single context
+      multiline_threshold = 10, -- Maximum number of lines to show for a single context
       trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
       mode = 'cursor', -- Line used to calculate context. Choices: 'cursor', 'topline'
       -- Separator between context and content. Should be a single character string, like '-'.
@@ -129,6 +129,13 @@ return {
       { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
     },
   },
+  {
+    'sindrets/diffview.nvim',
+    keys = { -- load the plugin only when using it's keybinding:
+      { '<leader>G', '<cmd>DiffviewOpen<cr>' },
+      { '<leader>H', '<cmd>DiffviewFileHistory %<cr>' },
+    },
+  },
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
@@ -143,7 +150,9 @@ return {
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>h', group = 'Git [h]unk', mode = { 'n', 'v' } },
+        { '<leader>H', group = 'Git [H]istory', mode = { 'n', 'v' } },
+        { '<leader>G', group = '[G]it Diff', mode = { 'n', 'v' } },
       }
     end,
   },

@@ -282,7 +282,8 @@
             "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": "",
-            "collapseDeleted": false
+            "collapseDeleted": false,
+            "inlineEdits": true
         },
         "MessageTags": {
             "enabled": false
@@ -626,6 +627,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1726842113097
+        "settingsSyncVersion": 1728227783186
     }
 }

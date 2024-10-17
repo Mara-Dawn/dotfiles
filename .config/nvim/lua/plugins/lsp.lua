@@ -147,6 +147,57 @@ return {
             },
           },
         },
+        -- pylsp = {
+        --   settings = {
+        --     pylsp = {
+        --       plugins = {
+        --         autopep8 = {
+        --           enabled = false,
+        --         },
+        --         jedi_completion = {
+        --           enabled = false,
+        --         },
+        --         jedi_definition = {
+        --           enabled = false,
+        --         },
+        --         jedi_hover = {
+        --           enabled = false,
+        --         },
+        --         jedi_references = {
+        --           enabled = false,
+        --         },
+        --         jedi_signature_help = {
+        --           enabled = false,
+        --         },
+        --         jedi_symbols = {
+        --           enabled = false,
+        --         },
+        --         mccabe = {
+        --           enabled = false,
+        --         },
+        --         preload = {
+        --           enabled = false,
+        --         },
+        --         pycodestyle = {
+        --           enabled = false,
+        --         },
+        --         pydocstyle = {
+        --           enabled = false,
+        --         },
+        --         pyflakes = {
+        --           enabled = false,
+        --         },
+        --         yapf = {
+        --           enabled = false,
+        --         },
+        --         rope_autoimport = {
+        --           enabled = true,
+        --           memory = true,
+        --         },
+        --       },
+        --     },
+        --   },
+        -- },
         basedpyright = {
           settings = {
 
@@ -195,7 +246,8 @@ return {
         'basedpyright',
         'debugpy',
         'hyprls',
-        'prettierd',
+        'prettier',
+        'gopls',
         'cssls',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }

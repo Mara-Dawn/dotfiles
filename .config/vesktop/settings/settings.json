@@ -3,7 +3,8 @@
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [
-        "https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css"
+        "#https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css",
+        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/catppuccin-mocha.theme.css"
     ],
     "enabledThemes": [],
     "enableReactDevtools": false,
@@ -85,7 +86,7 @@
             "enabled": false
         },
         "BetterFolders": {
-            "enabled": false,
+            "enabled": true,
             "sidebar": true,
             "sidebarAnim": true,
             "closeAllFolders": false,
@@ -396,9 +397,6 @@
         "PreviewMessage": {
             "enabled": false
         },
-        "PronounDB": {
-            "enabled": false
-        },
         "QuickMention": {
             "enabled": false
         },
@@ -460,7 +458,9 @@
             "enabled": false
         },
         "ShowConnections": {
-            "enabled": true
+            "enabled": true,
+            "iconSpacing": 1,
+            "iconSize": 32
         },
         "ShowHiddenChannels": {
             "enabled": true,
@@ -608,12 +608,22 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": false
+            "enabled": true,
+            "multiplier": 4
         },
         "FullSearchContext": {
             "enabled": false
         },
         "AccountPanelServerProfile": {
+            "enabled": false
+        },
+        "UserMessagesPronouns": {
+            "enabled": false
+        },
+        "DynamicImageModalAPI": {
+            "enabled": false
+        },
+        "FixImagesQuality": {
             "enabled": false
         }
     },
@@ -627,6 +637,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1728227783186
+        "settingsSyncVersion": 1732035649431
     }
 }

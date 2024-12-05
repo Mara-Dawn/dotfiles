@@ -77,6 +77,7 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(zoxide init zsh --cmd cd)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 eval "$(starship init zsh)"
+eval "$(thefuck --alias fuck)"
 
 # this enables transient prompt
 # set-long-prompt() { PROMPT=$(starship prompt) }

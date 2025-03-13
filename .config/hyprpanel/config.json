@@ -457,7 +457,7 @@
   "menus.clock.weather.unit": "metric",
   "menus.dashboard.powermenu.avatar.image": "/home/mara/Downloads/pfp.png",
   "menus.dashboard.stats.enable_gpu": false,
-  "bar.customModules.updates.rightClick": "",
+  "bar.customModules.updates.rightClick": "$TERM -e waybar-updates -l 100 | jq '.text'",
   "theme.bar.buttons.modules.updates.enableBorder": false,
   "bar.customModules.weather.unit": "metric",
   "bar.customModules.cava.showIcon": true,
@@ -466,5 +466,12 @@
   "menus.clock.weather.enabled": true,
   "bar.customModules.cava.stereo": false,
   "bar.clock.showTime": true,
-  "bar.workspaces.workspaces": 5
+  "bar.workspaces.workspaces": 5,
+  "menus.dashboard.controls.enabled": true,
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
+  "bar.customModules.updates.padZero": false,
+  "bar.customModules.updates.leftClick": "$TERM -e yay -Syu"
 }

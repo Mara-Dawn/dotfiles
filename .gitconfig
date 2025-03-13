@@ -6,3 +6,5 @@
 	insteadOf = https://github.com/
 [pull]
 	rebase = true
+[safe]
+	directory = /usr/share/sddm/themes/sddm-astronaut-theme

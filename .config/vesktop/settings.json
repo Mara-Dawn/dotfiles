@@ -6,7 +6,8 @@
     "hardwareAcceleration": true,
     "spellCheckLanguages": [
         "en-US",
-        "en"
+        "en",
+        "de-DE"
     ],
     "arRPC": false
 }

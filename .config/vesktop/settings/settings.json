@@ -3,8 +3,8 @@
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [
-        "#https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css",
-        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/catppuccin-mocha.theme.css"
+        "https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css",
+        "#https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/catppuccin-mocha.theme.css"
     ],
     "enabledThemes": [],
     "enableReactDevtools": false,
@@ -189,7 +189,7 @@
             "enabled": false
         },
         "FavoriteEmojiFirst": {
-            "enabled": true
+            "enabled": false
         },
         "FavoriteGifSearch": {
             "enabled": false
@@ -219,9 +219,6 @@
             "enabled": false
         },
         "GreetStickerPicker": {
-            "enabled": false
-        },
-        "HideAttachments": {
             "enabled": false
         },
         "iLoveSpam": {
@@ -553,7 +550,7 @@
             "enabled": false
         },
         "VencordToolbox": {
-            "enabled": true
+            "enabled": false
         },
         "ViewIcons": {
             "enabled": false
@@ -571,7 +568,7 @@
             "enabled": true
         },
         "WebScreenShareFixes": {
-            "enabled": true
+            "enabled": false
         },
         "WhoReacted": {
             "enabled": false
@@ -599,7 +596,7 @@
             "enabled": false
         },
         "AlwaysExpandRoles": {
-            "enabled": true
+            "enabled": false
         },
         "CopyFileContents": {
             "enabled": false
@@ -625,6 +622,15 @@
         },
         "FixImagesQuality": {
             "enabled": false
+        },
+        "FullUserInChatbox": {
+            "enabled": false
+        },
+        "IrcColors": {
+            "enabled": false
+        },
+        "HideMedia": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -637,6 +643,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1732049542653
+        "settingsSyncVersion": 1738494198457
     }
 }

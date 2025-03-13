@@ -473,5 +473,6 @@
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
   "bar.customModules.updates.padZero": false,
-  "bar.customModules.updates.leftClick": "$TERM -e yay -Syu"
+  "bar.customModules.updates.leftClick": "$TERM -e yay -Syu",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "bash -c \"/home/mara/.dotfiles/scripts/snapshot.sh\""
 }

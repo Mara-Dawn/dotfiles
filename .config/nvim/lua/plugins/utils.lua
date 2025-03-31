@@ -25,11 +25,7 @@ return {
     },
   },
   {
-    'zbirenbaum/copilot-cmp',
-    event = 'InsertEnter',
-    config = function()
-      require('copilot_cmp').setup()
-    end,
+    'giuxtaposition/blink-cmp-copilot',
     dependencies = {
       'zbirenbaum/copilot.lua',
       cmd = 'Copilot',
@@ -39,14 +35,6 @@ return {
           panel = { enabled = false },
         }
       end,
-    },
-  },
-  {
-    'akinsho/toggleterm.nvim',
-    version = '*',
-    opts = {
-      open_mapping = [[<c-\>]],
-      direction = 'float',
     },
   },
   {
@@ -197,6 +185,7 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+      require('mini.icons').setup()
       require('mini.hipatterns').setup {
         highlighters = {
           hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
@@ -283,6 +272,16 @@ return {
       { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
       { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
       { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
+    },
+  },
+  {
+    'OXY2DEV/markview.nvim',
+    lazy = false,
+
+    -- For blink.cmp's completion
+    -- source
+    dependencies = {
+      'saghen/blink.cmp',
     },
   },
 }

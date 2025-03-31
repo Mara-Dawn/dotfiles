@@ -45,6 +45,7 @@ vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.expandtab = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -86,3 +87,5 @@ vim.filetype.add {
 
 -- This disables showing of the blame text next to the cursor
 vim.g.gitblame_display_virtual_text = 0
+
+vim.diagnostic.config { virtual_text = true, virtual_lines = { current_line = true } }

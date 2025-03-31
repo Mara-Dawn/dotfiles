@@ -131,14 +131,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {
-        --   settings = {
-        --     pyright = { autoImportCompletion = true },
-        --     python = { analysis = { autoSearchPaths = true, diagnosticMode = 'openFilesOnly', useLibraryCodeForTypes = true, typeCheckingMode = 'off' } },
-        --   },
-        -- },
         ruff = {
           init_options = {
             settings = {
@@ -147,57 +139,6 @@ return {
             },
           },
         },
-        -- pylsp = {
-        --   settings = {
-        --     pylsp = {
-        --       plugins = {
-        --         autopep8 = {
-        --           enabled = false,
-        --         },
-        --         jedi_completion = {
-        --           enabled = false,
-        --         },
-        --         jedi_definition = {
-        --           enabled = false,
-        --         },
-        --         jedi_hover = {
-        --           enabled = false,
-        --         },
-        --         jedi_references = {
-        --           enabled = false,
-        --         },
-        --         jedi_signature_help = {
-        --           enabled = false,
-        --         },
-        --         jedi_symbols = {
-        --           enabled = false,
-        --         },
-        --         mccabe = {
-        --           enabled = false,
-        --         },
-        --         preload = {
-        --           enabled = false,
-        --         },
-        --         pycodestyle = {
-        --           enabled = false,
-        --         },
-        --         pydocstyle = {
-        --           enabled = false,
-        --         },
-        --         pyflakes = {
-        --           enabled = false,
-        --         },
-        --         yapf = {
-        --           enabled = false,
-        --         },
-        --         rope_autoimport = {
-        --           enabled = true,
-        --           memory = true,
-        --         },
-        --       },
-        --     },
-        --   },
-        -- },
         basedpyright = {
           settings = {
 
@@ -226,6 +167,64 @@ return {
             },
           },
         },
+        volar = {
+          init_options = {
+            vue = {
+              hybridMode = false,
+            },
+          },
+          settings = {
+            typescript = {
+              inlayHints = {
+                enumMemberValues = {
+                  enabled = true,
+                },
+                functionLikeReturnTypes = {
+                  enabled = true,
+                },
+                propertyDeclarationTypes = {
+                  enabled = true,
+                },
+                parameterTypes = {
+                  enabled = true,
+                  suppressWhenArgumentMatchesName = true,
+                },
+                variableTypes = {
+                  enabled = true,
+                },
+              },
+            },
+          },
+        },
+        -- TypeScript
+        ts_ls = {
+          init_options = {
+            plugins = {
+              {
+                name = '@vue/typescript-plugin',
+                location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                languages = { 'vue' },
+              },
+            },
+          },
+          settings = {
+            typescript = {
+              tsserver = {
+                useSyntaxServer = false,
+              },
+              inlayHints = {
+                includeInlayParameterNameHints = 'all',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -246,7 +245,6 @@ return {
         'basedpyright',
         'debugpy',
         'hyprls',
-        'prettier',
         'gopls',
         'cssls',
       })

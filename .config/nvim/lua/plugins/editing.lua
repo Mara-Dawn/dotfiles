@@ -37,8 +37,6 @@ local label_comparator = function(entry1, entry2)
 end
 
 return {
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
   { -- Autoformat
@@ -135,6 +133,7 @@ return {
             -- cmp.config.compare.score,
             -- require('cmp-under-comparator').under,
             require('cmp-under-comparator').under,
+            require('copilot_cmp.comparators').prioritize,
             -- cmp.config.compare.kind,
             -- cmp.config.compare.sort_text,
             -- cmp.config.compare.length,
@@ -230,6 +229,7 @@ return {
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
             group_index = 0,
           },
+          { name = 'copilot' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },

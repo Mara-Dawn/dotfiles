@@ -89,6 +89,12 @@ return {
             },
           },
         },
+
+        list = {
+          selection = {
+            auto_insert = false,
+          },
+        },
       },
 
       -- Default list of enabled providers defined so that you can extend it

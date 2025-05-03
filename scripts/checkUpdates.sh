@@ -11,6 +11,17 @@ has_param() {
     return 1
 }
 
+wait_for_process_to_finish() {
+    local process_name="$1"
+    local pid
+
+    while pid=$(pgrep -x "$process_name"); do
+        wait "$pid" 2>/dev/null || true
+    done
+
+    sleep 2
+}
+
 check_arch_updates() {
     if command -v paru &> /dev/null; then
         aur_helper="paru"
@@ -19,10 +30,10 @@ check_arch_updates() {
     fi
 
     if has_param "-tooltip" "$@"; then
-        command=""
+        command=" | head -n 50"
         official_updates=""
         aur_updates=""
-        sleep 1
+        wait_for_process_to_finish "checkupdates"
     else
         command="2>/dev/null | wc -l"
         official_updates=0

@@ -481,9 +481,9 @@
   "theme.bar.buttons.clock.enableBorder": false,
   "bar.media.show_active_only": true,
   "bar.notifications.show_total": true,
-  "bar.customModules.updates.updateCommand": "/home/mara/.dotfiles/scripts/checkUpdates.sh -arch",
+  "bar.customModules.updates.updateCommand": "/usr/share/hyprpanel/scripts/checkUpdates.sh -arch",
   "bar.customModules.updates.extendedTooltip": true,
   "bar.customModules.cpuTemp.pollingInterval": 2000,
-  "bar.customModules.updates.updateTooltipCommand": "/home/mara/.dotfiles/scripts/checkUpdates.sh -arch -tooltip",
+  "bar.customModules.updates.updateTooltipCommand": "/usr/share/hyprpanel/scripts/checkUpdates.sh -arch -tooltip",
   "bar.customModules.updates.label": true
 }

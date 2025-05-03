@@ -86,7 +86,7 @@
             "enabled": false
         },
         "BetterFolders": {
-            "enabled": true,
+            "enabled": false,
             "sidebar": true,
             "sidebarAnim": true,
             "closeAllFolders": false,
@@ -631,6 +631,9 @@
         },
         "HideMedia": {
             "enabled": false
+        },
+        "DisableDeepLinks": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -643,7 +646,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742995667306
+        "settingsSyncVersion": 1745330476880
     },
     "eagerPatches": false
 }

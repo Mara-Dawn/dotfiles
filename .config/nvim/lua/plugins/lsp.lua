@@ -121,6 +121,8 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities({}, false))
 
+      require('lspconfig').gdscript.setup(capabilities)
+
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
@@ -144,7 +146,7 @@ return {
 
             basedpyright = {
               analysis = {
-                include = { '~/Repositories/Crunchy-Bot/src/', '**/*.py' },
+                -- include = { '~/Repositories/Crunchy-Bot/src/', '**/*.py', '~/Repositories/RPGBot/src/' },
                 autoImportCompletions = true,
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
@@ -167,35 +169,35 @@ return {
             },
           },
         },
-        volar = {
-          init_options = {
-            vue = {
-              hybridMode = false,
-            },
-          },
-          settings = {
-            typescript = {
-              inlayHints = {
-                enumMemberValues = {
-                  enabled = true,
-                },
-                functionLikeReturnTypes = {
-                  enabled = true,
-                },
-                propertyDeclarationTypes = {
-                  enabled = true,
-                },
-                parameterTypes = {
-                  enabled = true,
-                  suppressWhenArgumentMatchesName = true,
-                },
-                variableTypes = {
-                  enabled = true,
-                },
-              },
-            },
-          },
-        },
+        -- volar = {
+        --   init_options = {
+        --     vue = {
+        --       hybridMode = false,
+        --     },
+        --   },
+        --   settings = {
+        --     typescript = {
+        --       inlayHints = {
+        --         enumMemberValues = {
+        --           enabled = true,
+        --         },
+        --         functionLikeReturnTypes = {
+        --           enabled = true,
+        --         },
+        --         propertyDeclarationTypes = {
+        --           enabled = true,
+        --         },
+        --         parameterTypes = {
+        --           enabled = true,
+        --           suppressWhenArgumentMatchesName = true,
+        --         },
+        --         variableTypes = {
+        --           enabled = true,
+        --         },
+        --       },
+        --     },
+        --   },
+        -- },
         -- TypeScript
         ts_ls = {
           init_options = {

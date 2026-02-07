@@ -2,7 +2,7 @@ if pgrep -x "linux-wallpaper" > /dev/null
 then
     echo "Running"
     pkill "linux-wallpaper"
-    hyprctl hyprpaper wallpaper "DP-3,~/.config/background_flipped.png"
+    hyprctl hyprpaper wallpaper "DP-3,~/.config/background.png"
     notify-send --expire-time 1350 "wallpaper-engine OFF"
 else
     echo "Stopped"

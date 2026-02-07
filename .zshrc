@@ -71,9 +71,9 @@ alias c='clear'
 eval "$(fzf --zsh)"
 eval "$(direnv hook zsh)"
 eval "$(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 eval "$(zoxide init zsh --cmd cd)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 eval "$(starship init zsh)"
@@ -95,3 +95,6 @@ eval "$(thefuck --alias fuck)"
 # zle -N zle-line-finish
 #
 # trap 'set-short-prompt; return 130' INT
+
+# Created by `pipx` on 2025-07-08 12:08:35
+export PATH="$PATH:/home/mara/.local/bin"

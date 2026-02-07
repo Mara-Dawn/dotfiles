@@ -173,9 +173,6 @@
         "DontRoundMyTimestamps": {
             "enabled": false
         },
-        "EmoteCloner": {
-            "enabled": true
-        },
         "Experiments": {
             "enabled": false
         },
@@ -634,6 +631,9 @@
         },
         "DisableDeepLinks": {
             "enabled": true
+        },
+        "ExpressionCloner": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -646,7 +646,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1745330476880
+        "settingsSyncVersion": 1748599779983
     },
     "eagerPatches": false
 }

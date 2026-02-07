@@ -38,6 +38,9 @@ return {
     },
   },
   {
+    'RRethy/vim-illuminate',
+  },
+  {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',
     dependencies = {
@@ -274,14 +277,14 @@ return {
       { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
     },
   },
-  {
-    'OXY2DEV/markview.nvim',
-    lazy = false,
-
-    -- For blink.cmp's completion
-    -- source
-    dependencies = {
-      'saghen/blink.cmp',
-    },
-  },
+  -- {
+  --   'OXY2DEV/markview.nvim',
+  --   lazy = false,
+  --
+  --   -- For blink.cmp's completion
+  --   -- source
+  --   dependencies = {
+  --     'saghen/blink.cmp',
+  --   },
+  -- },
 }

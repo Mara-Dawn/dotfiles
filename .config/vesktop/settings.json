@@ -9,5 +9,8 @@
         "en",
         "de-DE"
     ],
-    "arRPC": false
+    "arRPC": false,
+    "audio": {
+        "workaround": false
+    }
 }

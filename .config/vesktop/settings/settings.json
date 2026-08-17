@@ -53,7 +53,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -246,9 +247,6 @@
         "KeepCurrentChannel": {
             "enabled": false
         },
-        "LastFMRichPresence": {
-            "enabled": false
-        },
         "LoadingQuotes": {
             "enabled": false
         },
@@ -279,9 +277,6 @@
             "ignoreGuilds": "",
             "collapseDeleted": false,
             "inlineEdits": true
-        },
-        "MessageTags": {
-            "enabled": false
         },
         "MoreCommands": {
             "enabled": false
@@ -457,7 +452,7 @@
             "iconSize": 32
         },
         "ShowHiddenChannels": {
-            "enabled": true,
+            "enabled": false,
             "hideUnreads": true,
             "showMode": 0,
             "defaultAllowedUsersAndRolesDropdownState": true
@@ -634,6 +629,30 @@
         },
         "ExpressionCloner": {
             "enabled": true
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
+        },
+        "MusicRichPresence": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -646,7 +665,12 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1748599779983
+        "settingsSyncVersion": 1784197110323
     },
-    "eagerPatches": false
+    "eagerPatches": false,
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
+    },
+    "windowsMaterial": "none"
 }
